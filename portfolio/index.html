@@ -13,32 +13,77 @@
     <main>
         <section id="summary">
             <h2>Summary</h2>
-            <p>About me goes here...</p>
+            <p>Enthusiastic Software Developer with over 3 years of experience creating responsive and user-friendly websites and applications. Proficient in HTML, CSS, JavaScript, React. 
+                Good knowledge of C# and ASP.NET Core.
+                Good understanding of a relational database engine – SQL Server.
+                Passionate about creating visually appealing designs and optimizing user experiences.
+                Ability to learn and quickly comprehend new concepts and technologies.
+                I would make sure all projects are delivered according to schedule and specifications
+                </p>
         </section>
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li>Bachelor's Degree in Computer Science</li>
-                <li>Certification in Web Development</li>
+                <li>Bachelor's Degree in Industrial Chemistry</li>
             </ul>
         </section>
         <section id="job-experience">
             <h2>Job Experiences</h2>
-            <p>Previous job experiences...</p>
+            <p>IT Manager
+                Megalife Nigeria limited
+                September 2018 – July 2020 (1year 9months)<br/>
+                •	Running regular checks on network and data security<br/>
+                •	Identifying and acting on opportunities to improve and update software and systems.<br/>
+                •	Developing and implementing IT policy and best practice guides for the organization.
+                </p>
         </section>
         <section id="hobby">
             <h2>Hobby</h2>
-            <p>My hobbies...</p>
+            <p>Watching and playing Football</p>
         </section>
         <section id="other-skills">
             <h2>Other Skills</h2>
-            <p>Additional skills...</p>
+            <p>MS Word</p>
+            <p>MS Excel</p>
         </section>
     </main>
     <footer>
         <form id="contact-form">
             <h2>Contact Me</h2>
-            <!-- Contact form fields go here -->
+            <form action="#" method="post" id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required ><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required ><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required ></textarea><br><br>
+                
+                <label for="priority">Priority:</label><br>
+                <select id="priority" name="priority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+            <script>
+                // Basic HTML validation
+                const form = document.getElementById('contactForm');
+                form.addEventListener('submit', function(event) {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    const priority = document.getElementById('priority').value;
+        
+                    if (name === '' || email === '' || message === '' || priority === '') {
+                        event.preventDefault();
+                        alert('Please fill out all fields.');
+                    }
+                });
+            </script>
         </form>
     </footer>
 </body>
